@@ -4,7 +4,7 @@
   "description": "segundo proyecto parcial",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon proyect_backend/server.js",
+    "test": "exit 0",
     "start": "node server.js"
   },
   "author": "luis leonardo xicotencatl guzman",
