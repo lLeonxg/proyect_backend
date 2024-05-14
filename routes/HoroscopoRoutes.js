@@ -1,20 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const horoscoposController = require('../controllers/HoroscopoController');
+
+const { getAllHoroscopos, getHoroscopoBySigno, createHoroscopo, updateHoroscopo, deleteHoroscopo } = require('../controllers/HoroscopoController');
 
 // Obtener todos los horóscopos
-router.get('/', horoscoposController.getAllHoroscopos);
+router.get('/', getAllHoroscopos);
 
 // Obtener un horóscopo por su ID
-router.get('/:signo', horoscoposController.getHoroscopoBySigno);
+router.get('/:signo', getHoroscopoBySigno);
 
 // Crear un nuevo horóscopo
-router.post('/crearhoroscopo', horoscoposController.createHoroscopo);
+router.post('/crearhoroscopo', createHoroscopo);
 
 // Actualizar un horóscopo existente
-router.put('/:id', horoscoposController.updateHoroscopo);
+router.put('/:id', updateHoroscopo);
 
 // Eliminar un horóscopo existente
-router.delete('/:id', horoscoposController.deleteHoroscopo);
+router.delete('/:id', deleteHoroscopo);
 
 module.exports = router;
